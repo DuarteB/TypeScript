@@ -21,3 +21,15 @@ let completed: boolean[] = [ true, false, false, true ]
 //Classes
 class Phone{}
 let phone: Phone = new Phone();
+
+//Object Literals
+let product: { name: string; price: number } = {
+    name: 'pen',
+    price: 15     
+}
+
+//Functions
+
+const printer: (content: string) => void = (content: string) => {
+    console.log(content)
+}
