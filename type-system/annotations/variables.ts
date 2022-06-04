@@ -29,7 +29,31 @@ let product: { name: string; price: number } = {
 }
 
 //Functions
-
 const printer: (content: string) => void = (content: string) => {
     console.log(content)
+}
+
+//Functions that returns the 'any' type
+const person = '{"name": "Eduardo", "age": 20}';
+const newPerson: { name: string; age: number } = JSON.parse(person);
+console.log(newPerson);
+
+//Initialize variable later
+const forecast = ['sunny', 'rain', 'wind', 'cloudy'];
+let isSunny: boolean;
+
+for(let i = 0; i < forecast.length; i++) {
+    if(forecast[i] === 'sunny') {
+        isSunny = true
+    }
+}
+
+//Type can't be inferred correctly
+let temperatures = [8, 5, -2];
+let subzero: boolean | number = false;
+
+for(let i = 0; i < temperatures.length; i++) {
+    if(temperatures[i] < 0) {
+        subzero = temperatures[i];
+    }
 }
