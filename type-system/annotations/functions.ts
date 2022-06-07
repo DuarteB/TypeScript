@@ -22,3 +22,21 @@ const throwError = (content: string): never => {
     throw new Error(content);
 }
 
+const earthquake = {
+    date: new Date(),
+    velocity: 4.5
+}
+
+// const logVelocity = (earthquake:{ date: Date, velocity: number }): void => {
+//     console.log(earthquake.date);
+//     console.log(earthquake.velocity);
+// }
+
+//ES 2015
+ const logVelocity = ({date, velocity}: { date: Date, velocity: number }): void => {
+    console.log(date);
+    console.log(velocity);
+}
+
+logVelocity(earthquake);
+
