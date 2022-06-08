@@ -6,7 +6,7 @@ class GenericPrint<Type> {
 let myGenericValue = new GenericPrint<String>();
 myGenericValue.someValue = '1234';
 myGenericValue.print = function( otherValue ) {
-    console.log( otherValue )
+    console.log( otherValue );
 }
 
 myGenericValue.print(myGenericValue.someValue);
