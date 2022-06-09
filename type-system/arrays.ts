@@ -7,7 +7,7 @@ const meals: string[][] = [['breakfast'], ['lunch'], ['dinner']];
 const office = favoriteShows[0];
 
 //Prevent incompatible values
-favoriteShows.push(100);
+// favoriteShows.push(100);
 
 //Help with methods
 favoriteShows.map((show: string): string => {
@@ -18,4 +18,4 @@ favoriteShows.map((show: string): string => {
 const holidays: (Date | string)[]  = [];
 holidays.push(new Date());
 holidays.push('2022-01-01');
-holidays.push(100);
+// holidays.push(100);
