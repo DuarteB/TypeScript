@@ -1,8 +1,8 @@
-const track = {
-    genere: 'rock',
-    exclusive: false,
-    duration: 180
-}
+// const track = {
+//     genre: 'rock',
+//     exclusive: false,
+//     duration: 180
+// }
 
 const track1: [string, boolean, number] = ['rock', false, 180];
 
