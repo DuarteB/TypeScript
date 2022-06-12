@@ -1,22 +1,31 @@
-interface Movie {
-    title: string;
-    date: Date;
-    rating: number;
-    genre: string[]
+interface Detail {
+    report(): string;
 }
 
 const currentMovie = {
     title: 'Dune',
     date: new Date(2021, 9, 24),
     rating: 8.2,
-    genre: [ 'Action', 'Adventure' ]
+    genre: [ 'Action', 'Adventure' ],
+
+    report(): string{
+        return ` Title: ${this.title},\n Release Date: ${this.date},\n Rating;. ${this.rating},\n Genre: ${this.genre}\n`
+    }
 }
 
-const logMovie = (movie: Movie): void => {
-    console.log(`Title: ${movie.title}`);
-    console.log(`Release Date: ${movie.date}`);
-    console.log(`Rating: ${movie.rating}`);
-    console.log(`Genre: ${movie.genre}`);
+const currentTrack = {
+    genre: 'rock',
+    exclusive: false,
+    duration: 180,
+
+    report(): string{
+        return ` Genre: ${this.genre}, \n Is Exclusive: ${this.exclusive}, \n Track Duration: ${this.duration}`
+    }
 }
 
-logMovie(currentMovie);
+const logDetail = (item: Detail): void => {
+    console.log(item.report());
+}
+
+logDetail(currentMovie);
+logDetail(currentTrack);
